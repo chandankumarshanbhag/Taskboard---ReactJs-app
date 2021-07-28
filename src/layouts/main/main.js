@@ -1,8 +1,8 @@
-import React from 'react'
-import { Topbar, Fab } from "./components"
-import { makeStyles } from "@material-ui/core"
-import PerfectScrollbar from 'react-perfect-scrollbar'
+import { makeStyles } from "@material-ui/core";
+import React from 'react';
+import PerfectScrollbar from 'react-perfect-scrollbar';
 import 'react-perfect-scrollbar/dist/css/styles.css';
+import { Topbar,Breadcrumbs } from "./components";
 
 const useStyles = makeStyles(theme => ({
     root: {
@@ -14,15 +14,16 @@ const useStyles = makeStyles(theme => ({
 export default function Main({ children }) {
     const classes = useStyles();
     return (
-        <div style={{height: "100vh"}}>
-        <PerfectScrollbar component="div">
-            <div className={classes.root}>
-                <Topbar />
-                {children}
+        <div style={{ height: "100vh" }}>
+            <PerfectScrollbar component="div">
+                <div className={classes.root}>
+                    <Topbar />
+                    <Breadcrumbs />
+                    {children}
 
-                <Fab />
-            </div>
-        </PerfectScrollbar>
+                    {/* <Fab /> */}
+                </div>
+            </PerfectScrollbar>
         </div>
     )
 }

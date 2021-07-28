@@ -20,7 +20,7 @@ import {
 const useStyles = makeStyles(theme => ({
     card: {
         borderRadius: theme.spacing(1),
-        padding:"0px !important"
+        padding: "0px !important"
     },
     cardContent: {
         padding: "0px !important"
@@ -40,7 +40,7 @@ export default function Project() {
                                     <ProjectIcon />
                                 </Avatar>
                             </ListItemAvatar>
-                            <ListItemText primary="ICICI - VRM"></ListItemText>
+                            <ListItemText primary="My Awesome Project"></ListItemText>
                             <ListItemSecondaryAction>
                                 <IconButton size="small">
                                     <MoreVertIcon />

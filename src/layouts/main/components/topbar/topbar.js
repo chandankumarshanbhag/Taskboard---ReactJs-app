@@ -82,7 +82,7 @@ const useStyles = makeStyles((theme) => ({
   sectionDesktop: {
     display: 'none',
     [theme.breakpoints.up('md')]: {
-      display: 'flex',
+      display: 'block',
     },
   },
   sectionMobile: {
@@ -206,7 +206,7 @@ export default function Topbar() {
           </div>
           <div className={classes.grow} />
           <div className={classes.sectionDesktop}>
-            <IconButton aria-label="show 17 new notifications" color="inherit">
+            <IconButton>
               <Badge badgeContent={17} color="secondary">
                 <NotificationsIcon />
               </Badge>

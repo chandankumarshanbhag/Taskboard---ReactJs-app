@@ -22,11 +22,16 @@ import {
 } from "@material-ui/icons"
 
 const useStyles = makeStyles(theme => ({
-    // root: {
-    //     boxShadow: theme.shadows[0]
-    // },
+    root: {
+        minWidth: "320px",
+        // flexGrow: 1,
+        height: "100%",
+        margin: theme.spacing(1),
+    },
     card: {
-        borderRadius: theme.spacing(1)
+        borderRadius: theme.spacing(1),
+        margin: theme.spacing(1),
+
     },
     cardContent: {
         padding: theme.spacing(0)
@@ -56,7 +61,7 @@ const useStyles = makeStyles(theme => ({
 export default function Task() {
     const classes = useStyles()
     return (
-        <div>
+        <div className={classes.root}>
             <Card elevation={1} className={classes.card}>
                 <CardHeader title="Hello" action={<IconButton size="small"><MoreVertIcon /></IconButton>} titleTypographyProps={{ variant: "body1", color: "gray" }}></CardHeader>
                 <CardContent className={classes.cardContent}>
@@ -67,22 +72,59 @@ export default function Task() {
                         </ListItem>
                     </List>
                     <List className={classes.list}>
-                        <ListItem className={clsx(classes.listItem,classes.task)}>
+                        <ListItem className={clsx(classes.listItem, classes.task)}>
                             <ListItemAvatar><Radio size="small" /></ListItemAvatar>
                             <ListItemText primaryTypographyProps={{ variant: "body2" }} primary={"Task 2"}></ListItemText>
                         </ListItem>
-                        <ListItem className={clsx(classes.listItem,classes.task)}>
+                        <ListItem className={clsx(classes.listItem, classes.task)}>
+                            <ListItemAvatar><Radio size="small" /></ListItemAvatar>
+                            <ListItemText primaryTypographyProps={{ variant: "body2" }} primary={"Task 2"}></ListItemText>
+                        </ListItem>
+                        <ListItem className={clsx(classes.listItem, classes.task)}>
+                            <ListItemAvatar><Radio size="small" /></ListItemAvatar>
+                            <ListItemText primaryTypographyProps={{ variant: "body2" }} primary={"Task 2"}></ListItemText>
+                        </ListItem><ListItem className={clsx(classes.listItem, classes.task)}>
+                            <ListItemAvatar><Radio size="small" /></ListItemAvatar>
+                            <ListItemText primaryTypographyProps={{ variant: "body2" }} primary={"Task 2"}></ListItemText>
+                        </ListItem><ListItem className={clsx(classes.listItem, classes.task)}>
+                            <ListItemAvatar><Radio size="small" /></ListItemAvatar>
+                            <ListItemText primaryTypographyProps={{ variant: "body2" }} primary={"Task 2"}></ListItemText>
+                        </ListItem><ListItem className={clsx(classes.listItem, classes.task)}>
+                            <ListItemAvatar><Radio size="small" /></ListItemAvatar>
+                            <ListItemText primaryTypographyProps={{ variant: "body2" }} primary={"Task 2"}></ListItemText>
+                        </ListItem><ListItem className={clsx(classes.listItem, classes.task)}>
+                            <ListItemAvatar><Radio size="small" /></ListItemAvatar>
+                            <ListItemText primaryTypographyProps={{ variant: "body2" }} primary={"Task 2"}></ListItemText>
+                        </ListItem><ListItem className={clsx(classes.listItem, classes.task)}>
+                            <ListItemAvatar><Radio size="small" /></ListItemAvatar>
+                            <ListItemText primaryTypographyProps={{ variant: "body2" }} primary={"Task 2"}></ListItemText>
+                        </ListItem><ListItem className={clsx(classes.listItem, classes.task)}>
+                            <ListItemAvatar><Radio size="small" /></ListItemAvatar>
+                            <ListItemText primaryTypographyProps={{ variant: "body2" }} primary={"Task 2"}></ListItemText>
+                        </ListItem><ListItem className={clsx(classes.listItem, classes.task)}>
+                            <ListItemAvatar><Radio size="small" /></ListItemAvatar>
+                            <ListItemText primaryTypographyProps={{ variant: "body2" }} primary={"Task 2"}></ListItemText>
+                        </ListItem><ListItem className={clsx(classes.listItem, classes.task)}>
+                            <ListItemAvatar><Radio size="small" /></ListItemAvatar>
+                            <ListItemText primaryTypographyProps={{ variant: "body2" }} primary={"Task 2"}></ListItemText>
+                        </ListItem><ListItem className={clsx(classes.listItem, classes.task)}>
+                            <ListItemAvatar><Radio size="small" /></ListItemAvatar>
+                            <ListItemText primaryTypographyProps={{ variant: "body2" }} primary={"Task 2"}></ListItemText>
+                        </ListItem><ListItem className={clsx(classes.listItem, classes.task)}>
+                            <ListItemAvatar><Radio size="small" /></ListItemAvatar>
+                            <ListItemText primaryTypographyProps={{ variant: "body2" }} primary={"Task 2"}></ListItemText>
+                        </ListItem><ListItem className={clsx(classes.listItem, classes.task)}>
                             <ListItemAvatar><Radio size="small" /></ListItemAvatar>
                             <ListItemText primaryTypographyProps={{ variant: "body2" }} primary={"Task 2"}></ListItemText>
                         </ListItem>
                     </List>
                     <div>
-                    <List className={classes.list}>
-                        <ListItem className={classes.listItem} button>
-                            <ListItemText primaryTypographyProps={{ variant: "body2" }} primary={"Completed"}></ListItemText>
-                            <ListItemSecondaryAction><IconButton size="small"><ExpandMoreIcon /></IconButton></ListItemSecondaryAction>
-                        </ListItem>
-                    </List>
+                        <List className={classes.list}>
+                            <ListItem className={classes.listItem} button>
+                                <ListItemText primaryTypographyProps={{ variant: "body2" }} primary={"Completed"}></ListItemText>
+                                <ListItemSecondaryAction><IconButton size="small"><ExpandMoreIcon /></IconButton></ListItemSecondaryAction>
+                            </ListItem>
+                        </List>
                     </div>
                 </CardContent>
             </Card>
