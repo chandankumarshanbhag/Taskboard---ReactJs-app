@@ -1,6 +1,5 @@
 import React from 'react';
 import { fade, makeStyles } from '@material-ui/core/styles';
-import NiveusLogo from "./../../../../assets/images/niveus.jpeg"
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
 import IconButton from '@material-ui/core/IconButton';
@@ -188,7 +187,6 @@ export default function Topbar() {
           >
             <MenuIcon />
           </IconButton>
-          <img src={NiveusLogo} width="100px" />
           <Typography className={classes.title} variant="h4" noWrap>
             Taskboard
           </Typography>
