@@ -4,7 +4,21 @@ import typography from "./typography"
 
 const theme = createMuiTheme({
   overrides: {
-    
+    MuiTypography: {
+      root: {
+        color: "#000"
+      }
+    },
+    MuiSvgIcon: {
+      root: {
+        color: "#000"
+      }
+    },
+    MuiInputBase: {
+      input: {
+        color: "#000"
+      }
+    },
     MuiCssBaseline: {
       "@global": {
         'body::-webkit-scrollbar': {
@@ -21,22 +35,22 @@ const theme = createMuiTheme({
       }
     },
     MuiLinearProgress: {
-        root: {
-            borderRadius: 3,
-            overflow: 'hidden'
-        }
+      root: {
+        borderRadius: 3,
+        overflow: 'hidden'
+      }
     },
     MuiListItemIcon: {
-        root: {
-            minWidth: 32
-        }
+      root: {
+        minWidth: 32
+      }
     },
     MuiChip: {
-        root: {
-            backgroundColor: 'rgba(0,0,0,0.075)'
-        }
+      root: {
+        backgroundColor: 'rgba(0,0,0,0.075)'
+      }
     }
-},
+  },
   palette: {
     background: {
       dark: '#F4F6F8',
@@ -52,7 +66,7 @@ const theme = createMuiTheme({
     text: {
       primary: colors.blueGrey[900],
       secondary: colors.blueGrey[600]
-    }
+    },
   },
   shadows,
   typography

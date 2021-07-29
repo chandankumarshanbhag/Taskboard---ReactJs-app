@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import clsx from 'clsx';
 import {
     Card,
@@ -12,7 +12,8 @@ import {
     ListItemText,
     makeStyles,
     Radio,
-    Typography
+    Typography,
+    TextField,
 } from '@material-ui/core'
 
 import {
@@ -54,16 +55,31 @@ const useStyles = makeStyles(theme => ({
         "&:hover": {
             boxShadow: theme.shadows[1]
         }
+    },
+    textField: {
+        padding: "0px"
     }
 }));
 
 
-export default function Task() {
+
+export default function Task({ title }) {
+    const [titleEditMode, setTitleEditMode] = useState(false);
     const classes = useStyles()
     return (
         <div className={classes.root}>
             <Card elevation={1} className={classes.card}>
-                <CardHeader title="Hello" action={<IconButton size="small"><MoreVertIcon /></IconButton>} titleTypographyProps={{ variant: "body1", color: "gray" }}></CardHeader>
+                <CardHeader title={titleEditMode ? <TextField
+                    fullWidth
+                    className={classes.textField}
+                    placeholder="Task title"
+                    InputProps={{ disableUnderline: true }}
+                    onBlur={() => {
+                        setTitleEditMode(!titleEditMode)
+                    }}
+                ></TextField> : <Typography onDoubleClick={() => {
+                    setTitleEditMode(!titleEditMode)
+                }}>Hello</Typography>} action={<IconButton size="small"><MoreVertIcon /></IconButton>} titleTypographyProps={{ variant: "body1", color: "gray" }}></CardHeader>
                 <CardContent className={classes.cardContent}>
                     <List className={classes.list}>
                         <ListItem className={classes.listItem} button>

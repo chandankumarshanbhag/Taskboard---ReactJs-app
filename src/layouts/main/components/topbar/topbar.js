@@ -14,7 +14,9 @@ import AccountCircle from '@material-ui/icons/AccountCircle';
 import MailIcon from '@material-ui/icons/Mail';
 import NotificationsIcon from '@material-ui/icons/Notifications';
 import MoreIcon from '@material-ui/icons/MoreVert';
+import { Brightness4, Brightness7 } from "@material-ui/icons"
 import { Avatar } from '@material-ui/core';
+import useApp from '../../../../provider/app_provider';
 
 const useStyles = makeStyles((theme) => ({
   offset: theme.mixins.toolbar,
@@ -94,6 +96,7 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 export default function Topbar() {
+  const { darkTheme, setDarkTheme } = useApp()
   const classes = useStyles();
   const [anchorEl, setAnchorEl] = React.useState(null);
   const [mobileMoreAnchorEl, setMobileMoreAnchorEl] = React.useState(null);
@@ -206,6 +209,9 @@ export default function Topbar() {
           </div>
           <div className={classes.grow} />
           <div className={classes.sectionDesktop}>
+            <IconButton onClick={() => setDarkTheme(!darkTheme)}>
+              {darkTheme? <Brightness4 />:<Brightness7 />}
+            </IconButton>
             <IconButton>
               <Badge badgeContent={17} color="secondary">
                 <NotificationsIcon />
@@ -238,7 +244,7 @@ export default function Topbar() {
       </AppBar>
       {renderMobileMenu}
       {renderMenu}
-      <div style={{height: "64px"}}></div>
+      <div style={{ height: "64px" }}></div>
     </div>
   );
 }

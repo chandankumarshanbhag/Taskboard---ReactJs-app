@@ -4,6 +4,21 @@ import typography from "./typography"
 
 const theme = createMuiTheme({
   overrides: {
+    MuiTypography: {
+      root: {
+        color: "#fff"
+      }
+    },
+    MuiSvgIcon: {
+      root: {
+        color: "#fff"
+      }
+    },
+    MuiInputBase: {
+      input: {
+        color: "#fff"
+      }
+    },
     MuiLinearProgress: {
       root: {
         borderRadius: 3,
@@ -32,7 +47,7 @@ const theme = createMuiTheme({
       focus: 'rgba(255, 255, 255, 0.12)'
     },
     background: {
-      default: '#2a2d3d',
+      default: '#212121',
       dark: '#222431',
       paper: '#2a2d3d'
     },
@@ -45,7 +60,7 @@ const theme = createMuiTheme({
     text: {
       primary: '#f6f5f8',
       secondary: '#9699a4'
-    }
+    },
   },
   shadows,
   typography,

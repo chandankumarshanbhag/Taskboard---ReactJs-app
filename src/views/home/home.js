@@ -72,7 +72,7 @@ export default function Home() {
                     </div>
                     <Grid container spacing={2}>
                         <Grid item md={4}>
-                            <Link to="/project/icici-vrm" className={classes.link}>
+                            <Link to="/project/my-awesome-project" className={classes.link}>
                             <Project />
                             </Link>
                         </Grid>
