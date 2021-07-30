@@ -1,5 +1,5 @@
 import Router from "./router";
-import { ThemeProvider } from "@material-ui/core"
+import { ThemeProvider,CssBaseline } from "@material-ui/core"
 import {
   LightTheme,
   DarkTheme
@@ -10,6 +10,7 @@ function App() {
   const { darkTheme, setDarkTheme } = useApp();
   return (
     <ThemeProvider theme={darkTheme ? DarkTheme : LightTheme}>
+      <CssBaseline />
       <Router />
     </ThemeProvider>
   );

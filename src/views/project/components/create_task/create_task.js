@@ -18,6 +18,9 @@ const useStyles = makeStyles(theme => ({
     card: {
         borderRadius: theme.spacing(1),
         margin: theme.spacing(1),
+        // backgroundColor: theme.palette.background.paper,
+        // color: theme.palette.text.primary,
+        ...theme.palette.type == 'dark' ? theme.mixins.darkGlassBackground : theme.mixins.lightGlassBackground
 
     },
     cardContent: {
@@ -54,7 +57,7 @@ export default function CreateTask() {
     return (
         <div className={classes.root}>
             <Card elevation={1} className={classes.card}>
-                <ButtonBase style={{width: "100%"}}>
+                <ButtonBase style={{ width: "100%" }}>
                     <CardContent className={classes.cardContent}>
                         <IconButton color="primary" onClick={() => { }}>
                             <AddIcon />

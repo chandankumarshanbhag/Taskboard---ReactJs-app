@@ -3,7 +3,7 @@ import { useContext, createContext, useEffect, useState } from "react";
 let AppContext = createContext();
 
 export const AppProvider = function ({ children }) {
-    let [darkTheme, setDarkTheme] = useState(false);
+    let [darkTheme, setDarkTheme] = useState(true);
 
     useEffect(() => {
 

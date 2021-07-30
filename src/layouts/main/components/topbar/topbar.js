@@ -30,10 +30,13 @@ const useStyles = makeStyles((theme) => ({
     position: "fixed",
     "backdrop-filter": "blur( 6px )",
     "-webkit-backdrop-filter": "blur( 6px )",
+    // borderBottom: "1px solid rgba(200,200,200,0.5)"
 
   },
   menuButton: {
     marginRight: theme.spacing(2),
+    backgroundColor: theme.palette.background.default,
+    color: theme.palette.text.primary,
   },
   title: {
     marginLeft: theme.spacing(1),
@@ -69,7 +72,7 @@ const useStyles = makeStyles((theme) => ({
     justifyContent: 'center',
   },
   inputRoot: {
-    color: 'inherit',
+    color: 'primary',
   },
   inputInput: {
     padding: theme.spacing(1, 1, 1, 0),
@@ -182,14 +185,14 @@ export default function Topbar() {
     <div className={classes.grow}>
       <AppBar color="transparent" elevation="0" className={classes.appbar} position="fixed">
         <Toolbar>
-          <IconButton
+          {/* <IconButton
             edge="start"
             className={classes.menuButton}
-            color="inherit"
+            color="primary"
             aria-label="open drawer"
           >
             <MenuIcon />
-          </IconButton>
+          </IconButton> */}
           <Typography className={classes.title} variant="h4" noWrap>
             Taskboard
           </Typography>
@@ -210,7 +213,7 @@ export default function Topbar() {
           <div className={classes.grow} />
           <div className={classes.sectionDesktop}>
             <IconButton onClick={() => setDarkTheme(!darkTheme)}>
-              {darkTheme? <Brightness4 />:<Brightness7 />}
+              {darkTheme ? <Brightness4 /> : <Brightness7 />}
             </IconButton>
             <IconButton>
               <Badge badgeContent={17} color="secondary">
@@ -223,7 +226,7 @@ export default function Topbar() {
               aria-controls={menuId}
               aria-haspopup="true"
               onClick={handleProfileMenuOpen}
-              color="inherit"
+              color="default"
             >
               <Avatar>C</Avatar>
               {/* <AccountCircle /> */}
@@ -235,7 +238,7 @@ export default function Topbar() {
               aria-controls={mobileMenuId}
               aria-haspopup="true"
               onClick={handleMobileMenuOpen}
-              color="inherit"
+              color="primary"
             >
               <MoreIcon />
             </IconButton>

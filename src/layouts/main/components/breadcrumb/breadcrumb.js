@@ -14,6 +14,10 @@ const StyledBreadcrumb = withStyles((theme) => ({
         // '&:active': {
         //     boxShadow: theme.shadows[1],
         //     backgroundColor: emphasize(theme.palette.grey[300], 0.12),
+
+
+        ...theme.palette.type == 'dark' ? theme.mixins.darkGlassBackground : theme.mixins.lightGlassBackground
+
         // },
     },
 }))(Chip);

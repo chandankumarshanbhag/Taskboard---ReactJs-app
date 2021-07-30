@@ -20,7 +20,11 @@ import {
 const useStyles = makeStyles(theme => ({
     card: {
         borderRadius: theme.spacing(1),
-        padding: "0px !important"
+        padding: "0px !important",
+        backgroundColor: theme.palette.background.paper,
+        color: theme.palette.text.primary,
+        ...theme.palette.type == 'dark' ? theme.mixins.darkGlassBackground : theme.mixins.lightGlassBackground
+
     },
     cardContent: {
         padding: "0px !important"

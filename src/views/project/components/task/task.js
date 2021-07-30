@@ -32,7 +32,9 @@ const useStyles = makeStyles(theme => ({
     card: {
         borderRadius: theme.spacing(1),
         margin: theme.spacing(1),
-
+        // backgroundColor: "transparent",
+        color: theme.palette.text.primary,
+        ...theme.palette.type == 'dark' ? theme.mixins.darkGlassBackground : theme.mixins.lightGlassBackground
     },
     cardContent: {
         padding: theme.spacing(0)
